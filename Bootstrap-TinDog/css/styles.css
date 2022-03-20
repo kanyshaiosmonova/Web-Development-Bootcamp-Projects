@@ -1,14 +1,21 @@
+:root {
+    --color1:#ff4c68;
+    --color2:#ef8172;
+    --color3:#fff;
+}
 body {
     font-family: Montserrat, sans-serif;
-}
-#title {
-    background-color: #ff4c68;
-    color: #fff;
+    text-align: center;
 }
 h1 {
     font-weight: 900;
     line-height: 1.5;
     font-size: 3.5rem;
+}
+h2 {
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1.5;
 }
 h3 {
     font-weight: 700;
@@ -18,7 +25,7 @@ p {
     color: #8f8f8f;
 }
 .container-fluid {
-    padding: 3% 15%;
+    padding:7% 15%;
 }
 
 /* Navigation Bar */
@@ -44,23 +51,86 @@ p {
 }
 
 /* Title Image  */
+#title {
+    background-color: var(--color1);
+    color: var(--color3);
+    text-align: left;
+}
+#title .container-fluid {
+    padding: 3% 15% 7%;
+}
 .title-image {
     width:60%;
     transform: rotate(25deg);
+    position: absolute;
+    right: 30%;
 }
 
 /* Features Section */
 #features {
-    padding: 7% 15%;
+    position: relative;
+    background-color: var(--color3);
 }
 .feature-box {
-    text-align: center;
     padding: 5%;
 }
 .icon {
-    color: #ef8172;
+    color: var(--color2);
     margin-bottom: 1rem;
 }
 .icon:hover {
-    color: #ff4c68;
+    color: var(--color1);
+}
+
+/* Testimonial Section  */
+#testimonials {
+    background-color: var(--color2);
+    color: var(--color3);
+}
+.testimonial-image {
+    width:10%;
+    border-radius: 50%;
+    margin:20px;
+}
+#press {
+    background-color: var(--color2);
+    padding-bottom: 3%;
+}
+.press-logo {
+width:15%;
+margin:20px 20px 50px;
+}
+
+/* Pricing Section  */
+#pricing {
+    padding: 100px;
+}
+.pricing-column {
+    padding: 3% 2%;
+}
+
+/* CTA Section  */
+#cta {
+    background-color: var(--color1);
+    color: var(--color3);
+}
+.cta-heading {
+    font-weight: 900;
+    font-size: 3.5rem;
+    line-height: 1.5;
+
+}
+/* Footer Section */
+.footer-icons {
+    margin: 20px 10px;
+}
+
+@media (max-width:1028px) {
+    #title {
+        text-align: center;
+    }
+    .title-image {
+        position: static;
+        transform: rotate(0);
+    }
 }
